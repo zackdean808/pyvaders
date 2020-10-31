@@ -5,11 +5,22 @@ pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
 
-# Title Logo
+# Title logo with caption
 
 pygame.display.set_caption("PyVaders")
 icon = pygame.image.load("alien.png")
 pygame.display.set_icon(icon)
+
+# Player
+
+player_image = pygame.image.load("spaceship.png")
+player_x = 370
+player_y = 480
+
+
+def player():
+    screen.blit(player_image, (player_x, player_y))
+
 
 # Game Loop
 
@@ -21,5 +32,6 @@ while running:
             running = False
 
     # Draw with the following colors
-    screen.fill((5, 0, 0))
+    # screen.fill((5, 0, 0))
+    player()
     pygame.display.update()
