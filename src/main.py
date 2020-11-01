@@ -38,10 +38,10 @@ while running:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 player_x_change = -0.1
-                print("Left Key is press")
+                # print("Left Key is press")
             if event.key == pygame.K_RIGHT:
                 player_x_change = 0.1
-                print("Right Key is press")
+                # print("Right Key is press")
 
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -50,5 +50,13 @@ while running:
     # Draw with the following colors
     # screen.fill((5, 0, 0))
     player_x += player_x_change
+
+    if player_x <= 0:
+        player_x = 0
+
+    elif player_x >= 736:
+        player_x = 736
+
     player(player_x, player_y)
+
     pygame.display.update()
