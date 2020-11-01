@@ -1,4 +1,6 @@
+from random import randrange
 import pygame
+import random
 
 # intial instances of pygame
 pygame.init()
@@ -19,9 +21,10 @@ player_y = 480
 player_x_change = 0
 
 alien_image = pygame.image.load("alien_enemy.png")
-alien_x = 370
-alien_y = 80
-alien_x_change = 0
+alien_x = random.randrange(0, 800)
+alien_y = random.randrange(50, 150)
+alien_x_change = 0.3
+alien_y_change = 0
 
 
 def player(x, y):
