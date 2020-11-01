@@ -20,11 +20,18 @@ player_x = 370
 player_y = 480
 player_x_change = 0
 
+# Alien Enemy
 alien_image = pygame.image.load("alien_enemy.png")
 alien_x = random.randrange(0, 800)
 alien_y = random.randrange(50, 150)
 alien_x_change = 0.3
 alien_y_change = 0
+
+"""
+Draw Function from pygames
+Using the screen blit
+
+"""
 
 
 def player(x, y):
@@ -42,6 +49,8 @@ running = True
 while running:
 
     screen.fill((5, 0, 0))
+
+    # Listening to each events for key press directions
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -61,6 +70,7 @@ while running:
 
     # Draw with the following colors
     # screen.fill((5, 0, 0))
+
     player_x += player_x_change
 
     if player_x <= 0:
@@ -69,6 +79,12 @@ while running:
     elif player_x >= 736:
         player_x = 736
 
+    # Call instances
+
     player(player_x, player_y)
     alien(alien_x, alien_y)
+
+    """
+    Final draw call for the game.
+    """
     pygame.display.update()
