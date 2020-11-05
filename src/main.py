@@ -79,6 +79,15 @@ while running:
     elif player_x >= 736:
         player_x = 736
 
+    # Alien movements and x changes position
+    alien_x += alien_x_change
+
+    if alien_x <= 0:
+        alien_x_change = 0.3
+
+    elif alien_x >= 736:
+        alien_x_change = -0.3
+
     # Call instances
 
     player(player_x, player_y)
