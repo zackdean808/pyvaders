@@ -25,7 +25,7 @@ alien_image = pygame.image.load("alien_enemy.png")
 alien_x = random.randrange(0, 800)
 alien_y = random.randrange(50, 150)
 alien_x_change = 0.3
-alien_y_change = 0
+alien_y_change = 30
 
 """
 Draw Function from pygames
@@ -84,9 +84,11 @@ while running:
 
     if alien_x <= 0:
         alien_x_change = 0.3
+        alien_y += alien_y_change
 
     elif alien_x >= 736:
         alien_x_change = -0.3
+        alien_y += alien_y_change
 
     # Call instances
 
