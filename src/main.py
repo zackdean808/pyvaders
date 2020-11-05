@@ -7,6 +7,10 @@ pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
 
+# Add background image
+
+background = pygame.image.load("space-bg.jpg")
+
 # Title logo with caption
 
 pygame.display.set_caption("PyVaders")
@@ -49,6 +53,8 @@ running = True
 while running:
 
     screen.fill((5, 0, 0))
+
+    screen.blit(background, (0, 0))
 
     # Listening to each events for key press directions
 
