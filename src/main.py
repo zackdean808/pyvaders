@@ -9,7 +9,7 @@ screen = pygame.display.set_mode((800, 600))
 
 # Add background image
 
-background = pygame.image.load("space-bg.jpg")
+background = pygame.image.load("mountains03-1920-x-1080_full.png")
 
 # Title logo with caption
 
@@ -19,7 +19,7 @@ pygame.display.set_icon(icon)
 
 # Player
 
-player_image = pygame.image.load("spaceship.png")
+player_image = pygame.image.load("darkgrey_02.png")
 player_x = 370
 player_y = 480
 player_x_change = 0

@@ -7,6 +7,10 @@ pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
 
+# Add background image
+
+background = pygame.image.load("mountains03-1920-x-1080_full.png")
+
 # Title logo with caption
 
 pygame.display.set_caption("PyVaders")
@@ -15,7 +19,7 @@ pygame.display.set_icon(icon)
 
 # Player
 
-player_image = pygame.image.load("spaceship.png")
+player_image = pygame.image.load("darkgrey_02.png")
 player_x = 370
 player_y = 480
 player_x_change = 0
@@ -24,8 +28,8 @@ player_x_change = 0
 alien_image = pygame.image.load("alien_enemy.png")
 alien_x = random.randrange(0, 800)
 alien_y = random.randrange(50, 150)
-alien_x_change = 40
-alien_y_change = 40
+alien_x_change = 0.3
+alien_y_change = 30
 
 """
 Draw Function from pygames
@@ -49,6 +53,8 @@ running = True
 while running:
 
     screen.fill((5, 0, 0))
+
+    screen.blit(background, (0, 0))
 
     # Listening to each events for key press directions
 
@@ -78,6 +84,17 @@ while running:
 
     elif player_x >= 736:
         player_x = 736
+
+    # Alien movements and x changes position
+    alien_x += alien_x_change
+
+    if alien_x <= 0:
+        alien_x_change = 0.3
+        alien_y += alien_y_change
+
+    elif alien_x >= 736:
+        alien_x_change = -0.3
+        alien_y += alien_y_change
 
     # Call instances
 
