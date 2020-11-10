@@ -31,6 +31,14 @@ alien_y = random.randrange(50, 150)
 alien_x_change = 0.3
 alien_y_change = 30
 
+# Alien Enemy
+laser_image = pygame.image.load("laser.png")
+lasre_x = 0
+laser_y = 480
+laser_x_change = 0
+laser_y_change = 40
+laser_state = "ready"
+
 """
 Draw Function from pygames
 Using the screen blit
@@ -44,6 +52,12 @@ def player(x, y):
 
 def alien(x, y):
     screen.blit(alien_image, (x, y))
+
+
+def shoot_laser(x, y):
+    global laser_state
+    laser_state = "fired"
+    screen.blit(laser_image, (x + 16, y + 10))
 
 
 # Game Loop
@@ -69,6 +83,8 @@ while running:
             if event.key == pygame.K_RIGHT:
                 player_x_change = 0.3
                 # print("Right Key is press")
+            if event.key == pygame.K_RIGHT:
+                shoot_laser()
 
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
