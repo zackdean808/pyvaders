@@ -42,7 +42,6 @@ laser_state = "ready"
 """
 Draw Function from pygames
 Using the screen blit
-
 """
 
 
@@ -111,6 +110,11 @@ while running:
     elif alien_x >= 736:
         alien_x_change = -0.3
         alien_y += alien_y_change
+
+    # laser movement
+    if shoot_laser is "fired":
+        shoot_laser(player_x, laser_y)
+        laser_y -= laser_y_change
 
     # Call instances
 
