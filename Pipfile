@@ -4,8 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyvaders = {editable = true, path = "."}
+pyvaders = {path = "."}
 pygame = "*"
 
 [dev-packages]
-

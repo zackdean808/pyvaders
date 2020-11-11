@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e71f839b977a5a5ec6478deee0c903ec12fe2ecb2cc42ce9a1676032557e1189"
+            "sha256": "fb0bd971d0c490c7c20e84854546f86ce08da5ed29e51a8d395e85f775833af0"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -62,8 +62,8 @@
             "version": "==2.0.0"
         },
         "pyvaders": {
-            "editable": true,
-            "path": "."
+            "path": ".",
+            "version": "==2020.10.26"
         }
     },
     "develop": {}
