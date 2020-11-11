@@ -33,10 +33,10 @@ alien_y_change = 30
 
 # Alien Enemy
 laser_image = pygame.image.load("laser.png")
-lasre_x = 0
-laser_y = 480
+laser_x = 0
+laser_y = 500
 laser_x_change = 0
-laser_y_change = 40
+laser_y_change = 1
 laser_state = "ready"
 
 """
@@ -55,8 +55,8 @@ def alien(x, y):
 
 def shoot_laser(x, y):
     global laser_state
-    laser_state = "fired"
-    screen.blit(laser_image, (x + 16, y + 10))
+    laser_state = "fire"
+    screen.blit(laser_image, (x + 10, y + 8))
 
 
 # Game Loop
@@ -112,7 +112,7 @@ while running:
         alien_y += alien_y_change
 
     # laser movement
-    if shoot_laser is "fired":
+    if laser_state is "fire":
         shoot_laser(player_x, laser_y)
         laser_y -= laser_y_change
 
