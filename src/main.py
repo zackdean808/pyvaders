@@ -112,6 +112,10 @@ while running:
         alien_y += alien_y_change
 
     # laser movement
+    if laser_y <= 0:
+        laser_y = 500
+        laser_state = "ready"
+
     if laser_state is "fire":
         shoot_laser(player_x, laser_y)
         laser_y -= laser_y_change
