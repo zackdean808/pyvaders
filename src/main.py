@@ -83,7 +83,8 @@ while running:
                 player_x_change = 0.3
                 # print("Right Key is press")
             if event.key == pygame.K_SPACE:
-                shoot_laser(player_x, laser_y)
+                laser_x = player_x
+                shoot_laser(laser_x, laser_y)
 
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -117,7 +118,7 @@ while running:
         laser_state = "ready"
 
     if laser_state is "fire":
-        shoot_laser(player_x, laser_y)
+        shoot_laser(laser_x, laser_y)
         laser_y -= laser_y_change
 
     # Call instances
