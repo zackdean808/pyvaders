@@ -58,12 +58,16 @@ def shoot_laser(x, y):
     laser_state = "fire"
     screen.blit(laser_image, (x + 9, y + 6))
 
+
 def isCollision(alien_x, alien_y, laser_x, laser_y):
-    distance = math.sqrt(math.pow(alien_x - laser_x, 2) + math.pow(alien_y - laser_y ,2))
+    distance = math.sqrt(
+        math.pow(alien_x - laser_x, 2) + math.pow(alien_y - laser_y, 2)
+    )
     if distance < 27:
         return True
     else:
         return False
+
 
 # Game Loop
 
