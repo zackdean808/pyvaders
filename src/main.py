@@ -56,7 +56,7 @@ def alien(x, y):
 def shoot_laser(x, y):
     global laser_state
     laser_state = "fire"
-    screen.blit(laser_image, (x + 10, y + 8))
+    screen.blit(laser_image, (x + 9, y + 6))
 
 
 # Game Loop
