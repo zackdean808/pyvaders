@@ -25,11 +25,19 @@ player_y = 480
 player_x_change = 0
 
 # Alien Enemy
-alien_image = pygame.image.load("alien_enemy.png")
-alien_x = random.randrange(0, 800)
-alien_y = random.randrange(50, 150)
-alien_x_change = 0.3
-alien_y_change = 30
+alien_image = []
+alien_x = []
+alien_y = []
+alien_x_change = []
+alien_y_change = []
+num_of_enemies = 6
+
+for i in range(num_of_enemies):
+    alien_image.append(pygame.image.load("alien_enemy.png"))
+    alien_x.append(random.randrange(0, 800))
+    alien_y.append(random.randrange(50, 150))
+    alien_x_changea.append(0.3)
+    alien_y_change.append(30)
 
 # Alien Enemy
 laser_image = pygame.image.load("laser.png")
