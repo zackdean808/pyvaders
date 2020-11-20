@@ -50,6 +50,8 @@ laser_state = "ready"
 """
 Draw Function from pygames
 Using the screen blit
+
+def player, alien, collision and laser
 """
 
 
@@ -120,6 +122,10 @@ while running:
         player_x = 736
 
     # Alien movements and x changes position
+    """
+    interate from a number aliens and generat them
+    also check call isCollision
+    """
     for i in range(num_of_enemies):
         alien_x[i] += alien_x_change[i]
 
@@ -130,6 +136,14 @@ while running:
         elif alien_x[i] >= 736:
             alien_x_change[i] = -0.3
             alien_y[i] += alien_y_change[i]
+
+        isCollision(alien_x, alien_y, laser_x, laser_y)
+
+        if isCollision:
+            laser_y = 400
+            laser_state = "ready"
+            alien_x = random.randint(0, 800)
+            alien_y = random.randint(50, 150)
 
     # laser movement
     if laser_y <= 0:
@@ -147,5 +161,7 @@ while running:
 
     """
     Final draw call for the game.
+    call update by end of loop
+    need to keep in the bottom of loop
     """
     pygame.display.update()
