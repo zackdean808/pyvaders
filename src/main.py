@@ -120,15 +120,16 @@ while running:
         player_x = 736
 
     # Alien movements and x changes position
-    alien_x += alien_x_change
+    for i in range(num_of_enemies):
+        alien_x[i] += alien_x_change[i]
 
-    if alien_x <= 0:
-        alien_x_change = 0.3
-        alien_y += alien_y_change
+        if alien_x[i] <= 0:
+            alien_x_change[i] = 0.3
+            alien_y[i] += alien_y_change[i]
 
-    elif alien_x >= 736:
-        alien_x_change = -0.3
-        alien_y += alien_y_change
+        elif alien_x[i] >= 736:
+            alien_x_change[i] = -0.3
+            alien_y[i] += alien_y_change[i]
 
     # laser movement
     if laser_y <= 0:
