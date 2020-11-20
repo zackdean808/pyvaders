@@ -1,6 +1,7 @@
 from random import randrange
 import pygame
 import random
+import math
 
 # intial instances of pygame
 pygame.init()
@@ -36,7 +37,7 @@ for i in range(num_of_enemies):
     alien_image.append(pygame.image.load("alien_enemy.png"))
     alien_x.append(random.randrange(0, 800))
     alien_y.append(random.randrange(50, 150))
-    alien_x_changea.append(0.3)
+    alien_x_change.append(0.3)
     alien_y_change.append(30)
 
 # Alien Enemy
@@ -59,8 +60,8 @@ def player(x, y):
     screen.blit(player_image, (x, y))
 
 
-def alien(x, y):
-    screen.blit(alien_image, (x, y))
+def alien(x, y, i):
+    screen.blit(alien_image[i], (x, y))
 
 
 def shoot_laser(x, y):
@@ -137,13 +138,15 @@ while running:
             alien_x_change[i] = -0.3
             alien_y[i] += alien_y_change[i]
 
-        isCollision(alien_x, alien_y, laser_x, laser_y)
+        collision = isCollision(alien_x[i], alien_y[i], laser_x, laser_y)
 
-        if isCollision:
+        if collision:
             laser_y = 400
             laser_state = "ready"
-            alien_x = random.randint(0, 800)
-            alien_y = random.randint(50, 150)
+            alien_x[i] = random.randint(0, 800)
+            alien_y[i] = random.randint(50, 150)
+
+        alien(alien_x[i], alien_y[i], i)
 
     # laser movement
     if laser_y <= 0:
@@ -157,7 +160,6 @@ while running:
     # Call instances
 
     player(player_x, player_y)
-    alien(alien_x, alien_y)
 
     """
     Final draw call for the game.
