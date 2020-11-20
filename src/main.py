@@ -48,6 +48,10 @@ laser_x_change = 0
 laser_y_change = 1
 laser_state = "ready"
 
+# Score values 
+score = 0
+font = pygame.font.Font("Monoton-Regular.ttf",32) 
+
 """
 Draw Function from pygames
 Using the screen blit
@@ -143,6 +147,7 @@ while running:
         if collision:
             laser_y = 400
             laser_state = "ready"
+            score += 1
             alien_x[i] = random.randint(0, 800)
             alien_y[i] = random.randint(50, 150)
 
