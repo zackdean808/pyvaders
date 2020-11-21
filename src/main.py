@@ -6,7 +6,6 @@ import math
 
 # intial instances of pygame
 pygame.init()
-clock = pygame.time.Clock()
 
 screen = pygame.display.set_mode((800, 600))
 
@@ -52,15 +51,19 @@ laser_image = pygame.image.load("laser.png")
 laser_x = 0
 laser_y = 500
 laser_x_change = 0
-laser_y_change = 1
+laser_y_change = 5
 laser_state = "ready"
 
 # Score values
 score = 0
-font = pygame.font.Font("Monoton-Regular.ttf", 32)
 
+# font for score
+font = pygame.font.Font("Monoton-Regular.ttf", 32)
 score_displayX = 6
 score_displayY = 6
+
+# font for Game Over
+over_font = pygame.font.Font("Monoton-Regular.ttf", 32)
 
 """
 Draw Function from pygames
@@ -74,6 +77,9 @@ def show_score(x, y):
     score_display = font.render("Score : " + str(score), True, (255, 0, 0))
     screen.blit(score_display, (x, y))
 
+def game_over():
+    over_text = over_font.render("GAME OVER!!! ", True, (255, 0, 0))
+    screen.blit(over_text, (250, 250))
 
 def player(x, y):
     screen.blit(player_image, (x, y))
@@ -149,6 +155,14 @@ while running:
     also check call isCollision
     """
     for i in range(num_of_enemies):
+
+        # Game Over
+        if alien_y[i] > 440:
+            for j in range(num_of_enemies):
+                alien_y[j] = 2000
+            game_over()
+            break
+
         alien_x[i] += alien_x_change[i]
 
         if alien_x[i] <= 0:
@@ -193,4 +207,3 @@ while running:
     need to keep in the bottom of loop
     """
     pygame.display.update()
-    clock.tick(60)
