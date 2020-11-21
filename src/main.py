@@ -48,9 +48,12 @@ laser_x_change = 0
 laser_y_change = 1
 laser_state = "ready"
 
-# Score values 
+# Score values
 score = 0
-font = pygame.font.Font("Monoton-Regular.ttf",32) 
+font = pygame.font.Font("Monoton-Regular.ttf", 32)
+
+score_displayX = 10
+score_displayY = 10
 
 """
 Draw Function from pygames
@@ -58,6 +61,11 @@ Using the screen blit
 
 def player, alien, collision and laser
 """
+
+
+def show_score(x, y):
+    score_display = font.render("Score :" + str(score), True, (255, 255, 255))
+    screen.blit(score_display, (x, y))
 
 
 def player(x, y):
@@ -165,6 +173,8 @@ while running:
     # Call instances
 
     player(player_x, player_y)
+
+    show_score(score_displayX, score_displayY)
 
     """
     Final draw call for the game.
