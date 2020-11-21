@@ -1,16 +1,23 @@
 from random import randrange
 import pygame
+from pygame import mixer
 import random
 import math
 
 # intial instances of pygame
 pygame.init()
+clock = pygame.time.Clock()
 
 screen = pygame.display.set_mode((800, 600))
 
 # Add background image
 
 background = pygame.image.load("mountains03-1920-x-1080_full.png")
+
+# Background Music
+
+mixer.music.load("background2.wav")
+mixer.music.play(-1)
 
 # Title logo with caption
 
@@ -116,6 +123,8 @@ while running:
                 player_x_change = 0.5
                 # print("Right Key is press")
             if event.key == pygame.K_SPACE:
+                laser_sound = mixer.Sound("Laser_Weapon.wav")
+                laser_sound.play()
                 laser_x = player_x
                 shoot_laser(laser_x, laser_y)
 
@@ -153,6 +162,8 @@ while running:
         collision = isCollision(alien_x[i], alien_y[i], laser_x, laser_y)
 
         if collision:
+            explosion = mixer.Sound("Explosion.wav")
+            explosion.play()
             laser_y = 400
             laser_state = "ready"
             score += 1
@@ -182,3 +193,4 @@ while running:
     need to keep in the bottom of loop
     """
     pygame.display.update()
+    clock.tick(60)
