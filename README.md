@@ -28,7 +28,7 @@ Some Guidlines ✅ :
 
 - For any assest added must have source or credit source on the CREDITS.md file. If all Artist feel free to contrubrute  
 
-- Be Nice and Repectful for any new ideas or approaches for changing the code. All skill levels are welcome. 
+- Be Nice and Repectful to any new ideas or approaches for changing the code. All skill levels are welcome. 
 
 - You contrubite in any form (not limited docs, art, music, marketing, research etc .)
 

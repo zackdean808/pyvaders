@@ -10,10 +10,18 @@
 
 Alien Icon [Source](https://smashicons.com/)
 
+SpaceShip and Lasers [Source](https://livingtheindie.com/)
+
 ## Sound and Music
 
-Background Music by DARK FANTASY STUDIO [Source](https://www.humblebundle.com/downloads?key=5hkskaxV28T3Hx6s)
+Background Music by DARK FANTASY STUDIO [Source](https://www.humblebundle.com/software/big-royaltyfree-music-software?hmb_source=navbar&hmb_medium=product_tile&hmb_campaign=tile_index_3)
 
-exclusive material for license purchasing for SFX Source from 8-Bit SFX Pack [Source](http://thecactusbear.com/portfolio/?c=samplemusic)
+Website [Link](http://darkfantasystudio.com)
 
 ## Fonts 
+
+Monoton
+
+[Source](https://www.fontsquirrel.com/license/monoton)
+
+[Font Link](https://www.fontsquirrel.com/fonts/monoton)

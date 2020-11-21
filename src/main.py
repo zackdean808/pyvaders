@@ -15,7 +15,7 @@ background = pygame.image.load("assests/mountains03-1920-x-1080_full.png")
 
 # Background Music
 
-mixer.music.load("assests/background2.wav")
+mixer.music.load("assests/Dark Fantasy Studio - Particle voyager.mp3")
 mixer.music.play(-1)
 
 # Title logo with caption
@@ -129,7 +129,7 @@ while running:
                 player_x_change = 0.5
                 # print("Right Key is press")
             if event.key == pygame.K_SPACE:
-                laser_sound = mixer.Sound("assests/Laser_Weapon.wav")
+                laser_sound = mixer.Sound("assests/laser.wav")
                 laser_sound.play()
                 laser_x = player_x
                 shoot_laser(laser_x, laser_y)
