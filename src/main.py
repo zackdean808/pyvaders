@@ -52,8 +52,8 @@ laser_state = "ready"
 score = 0
 font = pygame.font.Font("Monoton-Regular.ttf", 32)
 
-score_displayX = 10
-score_displayY = 10
+score_displayX = 6
+score_displayY = 6
 
 """
 Draw Function from pygames
@@ -64,7 +64,7 @@ def player, alien, collision and laser
 
 
 def show_score(x, y):
-    score_display = font.render("Score :" + str(score), True, (255, 255, 255))
+    score_display = font.render("Score : " + str(score), True, (255, 0, 0))
     screen.blit(score_display, (x, y))
 
 
@@ -110,10 +110,10 @@ while running:
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                player_x_change = -0.3
+                player_x_change = -0.5
                 # print("Left Key is press")
             if event.key == pygame.K_RIGHT:
-                player_x_change = 0.3
+                player_x_change = 0.5
                 # print("Right Key is press")
             if event.key == pygame.K_SPACE:
                 laser_x = player_x
@@ -143,11 +143,11 @@ while running:
         alien_x[i] += alien_x_change[i]
 
         if alien_x[i] <= 0:
-            alien_x_change[i] = 0.3
+            alien_x_change[i] = 0.4
             alien_y[i] += alien_y_change[i]
 
         elif alien_x[i] >= 736:
-            alien_x_change[i] = -0.3
+            alien_x_change[i] = -0.4
             alien_y[i] += alien_y_change[i]
 
         collision = isCollision(alien_x[i], alien_y[i], laser_x, laser_y)
