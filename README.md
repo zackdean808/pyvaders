@@ -18,9 +18,9 @@ If the Alien touches the ship it's **GameOver**
 - Laser : spaceBar
 
 
-### How to contrubite to the project
+### How to contribute to the project
 
-Goal: to get more people to contrubite to simple projects without worry about it being serious. To learn how to contrubite to (not limited to) repo, git tooling, documentation, art work for software. 
+Goal: to get more people to contribute to simple projects without worry about it being serious. To learn how to contribute to (not limited to) repo, git tooling, documentation, art work for software. 
 
 Some Guidlines ✅ :
 
@@ -30,7 +30,7 @@ Some Guidlines ✅ :
 
 - Be Nice and Repectful to any new ideas or approaches for changing the code. All skill levels are welcome. 
 
-- You contrubite in any form (not limited docs, art, music, marketing, research etc .)
+- You contribute in any form (not limited docs, art, music, marketing, research etc.
 
 - If you want to build from scratch check the CREDIT.md for source and course
 
