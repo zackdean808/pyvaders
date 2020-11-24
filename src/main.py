@@ -157,7 +157,7 @@ while running:
     for i in range(num_of_enemies):
 
         # Game Over
-        if alien_y[i] > 440:
+        if alien_y[i] > 200:
             for j in range(num_of_enemies):
                 alien_y[j] = 2000
             game_over()
@@ -166,11 +166,11 @@ while running:
         alien_x[i] += alien_x_change[i]
 
         if alien_x[i] <= 0:
-            alien_x_change[i] = 0.4
+            alien_x_change[i] = 1
             alien_y[i] += alien_y_change[i]
 
         elif alien_x[i] >= 736:
-            alien_x_change[i] = -0.4
+            alien_x_change[i] = -1
             alien_y[i] += alien_y_change[i]
 
         collision = isCollision(alien_x[i], alien_y[i], laser_x, laser_y)
