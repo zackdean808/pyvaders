@@ -152,7 +152,7 @@ while running:
     # Alien movements and x changes position
     """
     interate from a number aliens and generat them
-    also check call isCollision
+    also check and call isCollision
     """
     for i in range(num_of_enemies):
 

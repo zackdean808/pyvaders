@@ -12,6 +12,26 @@ If the Alien touches the ship it's **GameOver**
 
 [Original Source Code](https://www.udemy.com/course/python-game-development-using-pygame-and-python-3/)
 
+## Development
+
+For working on `pyvaders`, you'll need to have Python >= 3.6 and [`pipenv`][1] installed. With those installed, run the following command to create a virtualenv for the project and fetch the dependencies:
+
+```
+$ pipenv install --dev
+...
+```
+
+Next, activate the virtualenv and get to work:
+
+```
+$ pipenv shell
+...
+(pyvaders) $
+```
+
+[1]: https://docs.pipenv.org/en/latest/%
+
+
 ## Controllers 🎮
 
 - Moment : left and right keys on your keyboard
