@@ -1,7 +1,3 @@
-%{?!python3_pkgversion:%global python3_pkgversion 3}
-
-%global %pypi_name ...
-
 Name:           pyvaders
 Version:	1         
 Release:        1%{?dist}
@@ -20,45 +16,38 @@ BuildRequires:  python%{python3_pkgversion}-setuptools
 Space Invaders is a classic arcade game from the 1980s. PyInvaders is an implementation of this in python
 
 
-%package -n python%{python3_pkgversion}-%{pypi_name}
-Summary:        %{summary}
-%{?python_provide:%python_provide python3-%{pypi_name}}
-
 Requires:	python3-pygame
 
-%description -n python%{python3_pkgversion}-%{pypi_name}
-
-
 %prep
-%autosetup -p1
+mkdir -p $RPM_BUILD_ROOT/usr/local/bin/
 
 
 %build
-%py3_build
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%py3_install
+mkdir -p %{buildroot}
+cp -rp * %{buildroot}
 
 
 %check
-# use what your upstream is using
-%{__python3} setup.py test
-%{__python3} -m pytest
-%{__python3} -m nose
-...
 
-
-%files -n  python%{python3_pkgversion}-%{pypi_name}
-%license add-license-file-here
-%doc add-docs-here
-# For noarch packages: sitelib
-%{python3_sitelib}/%{pypi_name}/
-%{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
-# For arch-specific packages: sitearch
-%{python3_sitearch}/%{pypi_name}/
-%{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
+%files
+%attr(0744, root, root) 
+/usr/local/bin/pyvaders/assets/alien_enemy.png
+/usr/local/bin/pyvaders/assets/alien.png
+/usr/local/bin/pyvaders/assets/darkgrey_02.png
+/usr/local/bin/pyvaders/assets/explosion.wav
+/usr/local/bin/pyvaders/assets/laser.png
+/usr/local/bin/pyvaders/assets/laser.wav
+/usr/local/bin/pyvaders/assets/Monoton-Regular.ttf
+/usr/local/bin/pyvaders/assets/Monotro-License
+/usr/local/bin/pyvaders/assets/mountains03-1920-x-1080_full.png
+/usr/local/bin/pyvaders/assets/mountains03-512-x-256_full.png
+/usr/local/bin/pyvaders/assets/space-bg.jpg
+/usr/local/bin/pyvaders/__init__.py
+/usr/local/bin/pyvaders/main.py
 
 
 %changelog
