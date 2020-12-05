@@ -17,8 +17,8 @@ background = pygame.image.load("assests/mountains03-1920-x-1080_full.png")
 
 # Background Music
 
-#mixer.music.load("assests/Dark Fantasy Studio - Particle voyager.mp3")
-#mixer.music.play(-1)
+mixer.music.load("assests/DFS-Particle-voyager.mp3")
+mixer.music.play(-1)
 
 # Title logo with caption
 

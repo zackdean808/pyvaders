@@ -32,6 +32,7 @@ install -d $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets/
 install assets/alien_enemy.png  $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets/
 install assets/alien.png $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets
 install assets/darkgrey_02.png $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets/
+install assets/DFS-Particle-voyager.mp3 $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets/
 install assets/explosion.wav $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets/
 install assets/laser.png $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets/
 install assets/laser.wav $RPM_BUILD_ROOT/usr/local/bin/pyvaders/assets/
