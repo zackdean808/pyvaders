@@ -60,7 +60,7 @@ Some Guidlines ✅ :
 ### Todo
 
 - [] Create a python package
-- [] Create a single binary for distrubtion 
+- [X] Create a single binary for distrubtion - Created rpm 
 - [] Create add More Levels 
 - [] Improve performace 
 - [] update Wiki 
