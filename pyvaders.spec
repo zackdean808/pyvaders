@@ -60,6 +60,7 @@ install main.py $RPM_BUILD_ROOT/usr/local/bin/pyvaders/
 /usr/local/bin/pyvaders/assets/space-bg.jpg
 /usr/local/bin/pyvaders/__init__.py
 /usr/local/bin/pyvaders/main.py
+/usr/local/bin/pyvaders/assets/DFS-Particle-voyager.mp3
 
 
 %changelog
